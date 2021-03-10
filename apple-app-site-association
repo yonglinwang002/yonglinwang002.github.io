@@ -7,13 +7,7 @@
                 "paths": [
                     "*"
                 ]
-            }, 
-            {
-                "appID": "PDAG8LH788.com.gewara.iphone.beta2", 
-                "paths": [
-                    "/gewaraapp/*"
-                ]
-            }, 
+            },
             {
                 "appID": "UWJVY6ERGE.com.gewara.hkdrama", 
                 "paths": [
