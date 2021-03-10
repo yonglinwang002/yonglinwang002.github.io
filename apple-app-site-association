@@ -5,7 +5,7 @@
             {
                 "appID": "UWJVY6ERGE.com.gewara.iphone", 
                 "paths": [
-                    "/","/test/*"
+                    "*","/","/test/*"
                 ]
             }, 
             {
