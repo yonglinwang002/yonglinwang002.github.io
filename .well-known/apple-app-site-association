@@ -9,9 +9,9 @@
                 ]
             },
             {
-                "appID": "UWJVY6ERGE.com.gewara.hkdrama", 
+                "appID": "UWJVY6ERGE.com.maoyan.hkdrama", 
                 "paths": [
-                    "/hkdrama/*"
+                    "/hkdrama/*","/test/*"
                 ]
             }
         ]
