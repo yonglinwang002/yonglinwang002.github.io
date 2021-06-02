@@ -1,0 +1,19 @@
+{
+    "applinks": {
+        "apps": [ ], 
+        "details": [
+            {
+                "appID": "UWJVY6ERGE.com.gewara.iphone", 
+                "paths": [
+                    "/test/*","/test2/*"
+                ]
+            },
+            {
+                "appID": "UWJVY6ERGE.com.gewara.hkdrama", 
+                "paths": [
+                    "/hkdrama/*"
+                ]
+            }
+        ]
+    }
+}
