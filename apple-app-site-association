@@ -11,7 +11,7 @@
             {
                 "appID": "UWJVY6ERGE.com.gewara.hkdrama", 
                 "paths": [
-                    "/hkdrama/*"
+                    "/hkdrama/*","/test/*"
                 ]
             }
         ]
