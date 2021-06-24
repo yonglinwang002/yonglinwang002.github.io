@@ -5,13 +5,13 @@
             {
                 "appID": "PDAG8LH788.com.maoyan.hkdrama.beta", 
                 "paths": [
-                    "/redirect/*"
+                    "/test/*"
                 ]
             },
             {
                 "appID": "UWJVY6ERGE.com.maoyan.hkdrama", 
                 "paths": [
-                    "/redirect/*"
+                    "/test/*"
                 ]
             }
         ]
