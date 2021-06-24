@@ -2,29 +2,85 @@
 <html>
 <head>
   <meta charset='utf-8'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>这是2测试页11</title>
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>中转页</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <script type='text/javascript'>
-    const urlParams = new URLSearchParams(queryString);
-    const page = urlParams.get('page')  // page
-    const amount = urlParams.get('amount')
-    if(page === 'detail'){
+    const appstoreURL ='https://www.apple.com/app-store/'
+    const googleplayURL = 'https://play.google.com/'
+    const BASE_PC_HOST = 'http://show-hk-pc.cs.maoyan.team/'
+    const BASE_MOBILE_HOST = 'http://show-hk-h5.cs.maoyan.team/'
 
+    var isAndroid = false,
+        iPhone = false,
+        iPad = false,
+        userAgent = navigator.userAgent;
+    if (userAgent.match("Android")) {
+        isAndroid = true;
+    } else if (userAgent.match("iPhone")) {
+        iPhone = true;
+    } else if (userAgent.match("iPad")) {
+        iPad = true;
+    }
+    const isMobile  = isAndroid || iPhone || iPad
+
+    const gotoInstallURL = isAndroid?googleplayURL:appstoreURL
+
+    // 跳转到相应的页面
+    var redirectURL = ''
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    console.log(queryString)
+
+    const page = urlParams.get('page')  // page
+    if(page === 'detail'){
+      const eventid = urlParams.get('eventid')
+      redirect(`event-detail/${eventid}`)
     }
 
-    function redirect(path,params) {
+    function redirect(path) {
+      var url = isMobile ? BASE_MOBILE_HOST: BASE_PC_HOST
+      url = `${url}${path}`
+      window.location.replace(url)
+    }
 
-      window.location.replace()
+    function gotoAppStore() {
+      window.location.replace(gotoInstallURL)
     }
 
   </script>
+
+
+  <style type="text/css">
+  .main {
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+  }
+  .icon {
+    padding: 10px;
+  }
+  .buttonBlock {
+    padding: 10px;
+  }
+  </style>
+
 </head>
 <body>
   
-  未安装APP 
-  到应用市场去安装
-  <button>到应用市场去安装</button>
+  <div class="main">
+    <div id='log'></div>
+    <div class="icon">
+      未安装APP
+      <img src="" />
+    </div>
+    <div class="buttonBlock">
+      <button onclick="gotoAppStore()">到应用市场去安装</button>
+    </div>
+  </div>
+ 
+  
 </body>
 </html>
