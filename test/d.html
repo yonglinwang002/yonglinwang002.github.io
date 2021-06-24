@@ -35,7 +35,7 @@
     console.log(queryString)
 
     const page = urlParams.get('page')  // page
-    if(page === 'detail'){
+    if(page.toLocaleLowerCase() === 'eventdetail'){
       const eventid = urlParams.get('eventid')
       redirect(`event-detail/${eventid}`)
     }
